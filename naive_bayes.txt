@@ -1,0 +1,76 @@
+Naive bayes 
+
+Take naive choices at each stage = 
+
+Great for text analytics - sentiment and spam etc. 
+
+Computationally efficient - scales linearly with number of columns - more efficient than others 
+
+Bayesian can be simple - algebraic system that can lead to complex analysis
+
+Bayes results from basics of conditional probability - the inverse relationship based on 
+same denomiators is useful as enable us to calculate 
+a harder conditional probability using an easier (known) one.  
+
+Interesting point - in real life it can be rare to have truly independent events 
+- we can ignore some and introduce conditional independence 
+
+we can make stuff that isn’t independent independent by segmenting into groups?
+- e.g. height, reading ability and age (young and old groups)
+
+Classifier is Bayesian if uses conditional probability 
+
+Bayesian classifiers approach slide - the denominator cancels out 
+P(C) is out label 
+
+First Naive assumption is that split attributes and assume conditional independence 
+For continuous attribute, naive assumption is follows normal distribution and can calculate 
+mean and s.d.
+NOTE: Bad idea based on actual distribution - e.g. Normal does terrible job of approximating
+a Poisson dist. 
+
+Scales so well as calculations are simple and can be parallelised (See example of nb classifier slide)
+NOTE: Probabilities don't add up to 1 
+
+Laplace correction - will increase error rate (but hopefully effect is small and offset by 
+cons of a zero 
+
+See summary slide
+
+Robust 
+Handles missing values elegantly (drop columns - less accurate but well handled)
+Works very well on text classification problems 
+Scales really well 
+
+Cons
+Independence assumption may not hold for some attributes - ignores any correlation in 
+attributes
+Bad at anomaly detection (finding needle in a haystack scenarios) 
+
+Note: Naive Bayes is the 'linear regression' of Bayesian classifiers 
+ 
+Alternative to random forests - NB 	more robust against low 'performing' attributes 
+
+Enter a Rabbit-hole: Bayesian Belief Networks 
+
+
+Spam example - folder
+
+
+Do we even have a job to accomplish if we’re given a perfect column?? 
+- perfect column means classifier won't consider anything else. 
+Ok, so we need counter-examples to prevent zero probabilities
+
+When plotting probability densities - a perfect column would have no overlap between email and spam 
+In this example when looking at the confusion matrix the low precision score means 
+that good emails are being quarantined as spam - defeats the purpose 
+
+If have lots of columns, need lots of data rows to prevent zero probabilities 
+dependent on data type - categorical 
+rule of thumb - couple thousand rows for categorical labels 
+
+
+
+
+
+
